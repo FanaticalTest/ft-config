@@ -6,3 +6,9 @@ This library handle the config file in a Test factory.
 ```
 ./gradlew build
 ```
+
+### Install in local repository
+```
+gradle install
+```
+

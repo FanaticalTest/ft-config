@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.8.RELEASE'
+		libVersion = '0.0.2'
 	}
 	repositories {
 		mavenCentral()
@@ -13,11 +14,13 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: "maven"
 
 group = 'com.fanaticaltest'
+version = "${libVersion}"
 jar {
 	baseName = 'ft-config'
-	version = '0.0.1-SNAPSHOT'
+	version = "${libVersion}"
 	manifest {
 		attributes 'Main-Class': 'com.fanaticaltest.ftconfig.Property'
 	}
