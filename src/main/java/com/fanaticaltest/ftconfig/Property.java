@@ -1,16 +1,10 @@
 package com.fanaticaltest.ftconfig;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-//@ComponentScan
-//@SpringBootApplication
 public class Property {
 
     private String pathFile;
