@@ -23,7 +23,6 @@ public class Property {
 
             input = new FileInputStream(pathFile);
 
-            // load a properties file
             prop.load(input);
 
             propertyValue = prop.getProperty(value);
