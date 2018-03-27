@@ -42,3 +42,5 @@ public String myValue = p.read("test.value");
 ./gradlew build
 ```
 
+## Jenkins
+The project have a `Jenkinsfile` that allows you to [setup a pipeline job](https://ziridis.atlassian.net/wiki/spaces/FT/pages/288292869/Jenkins+Pipeline+Setup).
