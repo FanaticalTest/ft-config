@@ -6,7 +6,7 @@ buildscript {
 	repositories {
 		//jcenter()
 		maven {
-			url 'http://artifactory.sak/artifactory/gradle-dev'
+			url "${artifactory_url}/gradle-dev"
 		}
 	}
 	dependencies {
@@ -23,7 +23,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: "maven"
-apply plugin: 'maven-publish'
+apply plugin: 'maven-publish' // required for publishing task
 
 group = 'com.fanaticaltest'
 version = "${libVersion}"
@@ -39,7 +39,7 @@ sourceCompatibility = 1.8
 repositories {
 	//jcenter()
 	maven {
-		url 'http://artifactory.sak/artifactory/gradle-dev'
+		url "${artifactory_url}/gradle-dev"
 	}
 }
 
@@ -65,7 +65,7 @@ publishing {
 				username = "${artifactory_user}"
 				password = "${artifactory_password}"
 			}
-			url "http://artifactory.sak/artifactory/gradle-dev-local"
+			url "${artifactory_url}/gradle-dev-local"
 		}
 	}
 }

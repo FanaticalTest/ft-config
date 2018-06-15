@@ -46,7 +46,7 @@ gradle build
 In Version 0.1.2 we add the Artifactory support. But we kept commented to use back `jcenter()` :
 * To publish `gradle publish`
 * Our Artifactory has been set on the port 80 and not 8081. And we use jfrog as Artifactory server.
-* Also you need to update the Artifact url `http://artifactory.sak/artifactory/gradle-dev`. Pay attention how you set your gradle repo in your Artifactory. On our side we have call it `gradle-dev
+* Also you need to update the Artifact url `${artifactory_url}/gradle-dev`. Pay attention how you set your gradle repo in your Artifactory. On our side we have call it `gradle-dev
 * Don't forget to add in `~/.gradle/gradle.properties` the following lines:
 ```
 artifactory_user=user
