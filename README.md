@@ -39,8 +39,19 @@ public String myValue = p.read("test.value");
 
 ## How to build the library?
 ```
-./gradlew build
+gradle build
 ```
 
-## Jenkins
-The project have a `Jenkinsfile` that allows you to [setup a pipeline job](https://ziridis.atlassian.net/wiki/spaces/FT/pages/288292869/Jenkins+Pipeline+Setup).
+## Using Artifactory
+In Version 0.1.2 we add the Artifactory support. But we kept commented to use back `jcenter()` :
+* To publish `gradle publish`
+* Our Artifactory has been set on the port 80 and not 8081. And we use jfrog as Artifactory server.
+* Also you need to update the Artifact url `http://artifactory.sak/artifactory/gradle-dev`. Pay attention how you set your gradle repo in your Artifactory. On our side we have call it `gradle-dev
+* Don't forget to add in `~/.gradle/gradle.properties` the following lines:
+```
+artifactory_user=user
+artifactory_password=password
+artifactory_url=http://articatory-url:8081/artifactory
+org.gradle.caching=true
+gradle.cache.push=false
+```
